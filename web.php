@@ -14,15 +14,7 @@ $sd = mysqli_real_escape_string($connection, trim($_POST["sd"]));
 $referer = $_SERVER['HTTP_REFERER'];
 
 echo  $_SERVER['HTTP_REFERER'];
-//echo SITE;
-//$t =  strpos($referer,SITE);
-//var_dump($t);
-//var_dump($referer);
-//exit();
 
-//  http://localhost/ec_2020/08/web_site/active.php?&code=OkpkpnfnUnbdtranZlaptyooUiovguevNzzbuvjy
-// 'http://localhost/ec_2020/08/web_site/index.php'
-// 'http://localhost/ec_2020/08/web_site'
 
 if ($sd != "" AND strpos($referer, SITE) !== false) {
 
