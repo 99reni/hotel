@@ -1,0 +1,45 @@
+.content{
+    margin-top:5%;
+    background-color: rgba(141, 143, 144, 0.79);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color:#ffffff;
+}
+.table{
+    margin-top: 10px;
+}
+td{
+    border:solid 1px #ffffff;
+    text-align: center;
+}
+.button:hover
+{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2), 0 6px 16px 0 rgba(0,0,0,0.19);
+   border:1px solid grey;
+
+}
+.insert{
+    width:80%;
+    background-color: red;
+    margin:auto;
+    padding-bottom: 10px;
+
+}
+
+.insert h4{
+    text-align: center;
+}
+
+
+.form input{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.form label{
+    width: 100%;
+    background-color: blue;
+    text-align: center;
+
+}
