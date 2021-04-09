@@ -97,7 +97,7 @@
                     </div>
 
                     <p style="margin-top: 30px;">No two neighborhoods are alike. Neither are any two Echo properties.
-                    When you stay with us, you’re not just staying anywhere, you’re staying somewhere—within a vibrant community,
+                    When you stay with us, you’re not just staying anywhere, you’re staying somewhere-within a vibrant community,
                     in a unique hotel that combines authentic local experiences, modern design and intimate service with the peace of mind
                     </p>
                     <p>

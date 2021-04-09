@@ -103,7 +103,58 @@
 
                         <div class="form-group  col-12 mx-auto">
 
+
                             <form method="post" action="web.php" name="register">
+                                <div style="color:#f00;">
+                                    <?php
+
+                                    $l = "";
+
+                                    if (isset($_GET["l"])) {
+                                        $l = $_GET["l"];
+
+                                        switch ($l) {
+                                            case "0" :
+                                                echo "No direct access!";
+                                                break;
+
+                                            case "1" :
+                                                echo "Unknown user!";
+                                                break;
+
+                                            case "2" :
+                                                echo "User with this name already exists, choose another one!";
+                                                break;
+
+                                            case "3" :
+                                                echo "Check your email to active your account!";
+                                                break;
+
+                                            case "4" :
+                                                echo "Fill all the fields!";
+                                                break;
+
+                                            case "5" :
+                                                echo "You are logged out!";
+                                                break;
+
+                                            case "6" :
+                                                echo "Your account is activated, you can login now!";
+                                                break;
+
+                                            case "7" :
+                                                echo "Security code is invalid!";
+                                                break;
+
+                                            case "8" :
+                                                echo "Your password is too short.";
+                                                break;
+
+
+                                        }
+                                    }
+                                    ?>
+                                </div>
                                 <label for="username2">Username: </label> <br><input type="text" class="form-control col-sm-12 col-md-6" name="username" id="username2"><br>
                                 <label for="password2">Password: </label>  <br><input type="password" class="form-control col-sm-12 col-md-6" name="password" id="password2"> (min 8
                                 characters)<br>
@@ -117,53 +168,10 @@
                                 <input type="reset" class="col-sm-12 col-md-3  col-12" name="rd" value="cancel">
                             </form>
                         </div>
-                <div style="color:#f00;">
-                    <?php
-
-                    $l = "";
-
-                    if (isset($_GET["l"])) {
-                        $l = $_GET["l"];
-
-                        switch ($l) {
-                            case "0" :
-                                echo "No direct access!";
-                                break;
-
-                            case "1" :
-                                echo "Unknown user!";
-                                break;
-
-                            case "2" :
-                                echo "User with this name already exists, choose another one!";
-                                break;
-
-                            case "3" :
-                                echo "Check your email to active your account!";
-                                break;
-
-                            case "4" :
-                                echo "Fill all the fields!";
-                                break;
-
-                            case "5" :
-                                echo "You are logged out!";
-                                break;
-
-                            case "6" :
-                                echo "Your account is activated, you can login now!";
-                                break;
-
-                            case "7" :
-                                echo "Security code is invalid!";
-                                break;
-                        }
-                    }
-
-                    ?>
 
 
-            </div>
+
+
         </div>
     </div>
 </div>

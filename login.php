@@ -111,7 +111,7 @@
                     </div>
                     <div class="login col-lg-6 col-sm-12 col-12" >
                         <br>
-                        <span class="psw" style="padding-top: 10px; margin-left:25%;">Forgot <a href="forgotpassword.php">password?</a></span>
+                        <span class="psw" style="padding-top: 10px; margin-left:25%;">Forgot your <a href="forgotpassword.php">password?</a></span>
                     </div>
                     <div style="color:#f00;">
                     <?php

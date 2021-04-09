@@ -14,7 +14,15 @@ $sd = mysqli_real_escape_string($connection, trim($_POST["sd"]));
 $referer = $_SERVER['HTTP_REFERER'];
 
 echo  $_SERVER['HTTP_REFERER'];
+//echo SITE;
+//$t =  strpos($referer,SITE);
+//var_dump($t);
+//var_dump($referer);
+//exit();
 
+//  http://localhost/ec_2020/08/web_site/active.php?&code=OkpkpnfnUnbdtranZlaptyooUiovguevNzzbuvjy
+// 'http://localhost/ec_2020/08/web_site/index.php'
+// 'http://localhost/ec_2020/08/web_site'
 
 if ($sd != "" AND strpos($referer, SITE) !== false) {
 
@@ -58,8 +66,14 @@ if ($sd != "" AND strpos($referer, SITE) !== false) {
                 redirection('register.php?l=4');
             }
 
-            if (isset($_POST['password']) AND !empty($_POST['password']) AND strlen($_POST['password']) > 7) {
-                $password = mysqli_real_escape_string($connection, trim($_POST["password"]));
+            if (isset($_POST['password']) AND !empty($_POST['password']) ) {
+                if(strlen($_POST['password']) >= 8)
+                {
+                    $password = mysqli_real_escape_string($connection, trim($_POST["password"]));
+                }
+                else{
+                    redirection('register.php?l=8');
+                }
             } else {
                 redirection('register.php?l=4');
             }

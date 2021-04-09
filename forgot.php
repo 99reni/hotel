@@ -1,28 +1,34 @@
 <?php
 session_start();
+require_once "db_config2.php";
+define("SALT1","wtSHSU890381IC4");
+define("SALT2","4CITAcywut46a");
 
-include_once 'db_config2.php';
-if(isset($_POST['submit']) and !empty($_POST['email']))
+if(isset($_POST['submit']) and !empty($_POST['email']) and !empty($_POST['newpassword'])  )
 {
     $email = $_POST['email'];
-    $result = mysqli_query($connection,"SELECT * FROM users where email='" . $_POST['email'] . "'");
-    $row = mysqli_fetch_assoc($result);
-    $fetchemail=$row['email'];
-    $password=$row['password'];
-    if($email==$fetchemail) {
-        $to = $email;
-        $subject = "Password";
-        $txt = "Your password is : $password.";
-        $headers = "From: echo@gmail.com" . "\r\n" .
-            "CC: somebodyelse@example.com";
-        mail($to,$subject,$txt,$headers);
+    $newpassword1=$_POST['newpassword'];
+    $newpassword= SALT1 . "$newpassword1" . SALT2;
+
+
+    $sql = "UPDATE users  SET password=MD5('$newpassword'),new_password_expires=now() where email='$email'";
+
+    if(mysqli_query($connection, $sql))
+    {
+
         header('Location: http://localhost/hotel/forgotpassword.php?l=1');
+
     }
     else{
         header('Location: http://localhost/hotel/forgotpassword.php?l=0');
+
     }
 }
 else{
     header('Location: http://localhost/hotel/forgotpassword.php?l=0');
+
 }
+
+
+
 ?>

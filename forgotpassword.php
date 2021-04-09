@@ -99,10 +99,14 @@ include 'db_config.php';
                         <h3>Enter your email address</h3>
                         <br>
                         <form action="forgot.php" method="post">
-                        <label for="email">Email: </label>
-                        <br><input type="text" class="form-control col-sm-12 col-md-6" name="email" id="email"><br>
+                            <label for="email">Email: </label>
+                            <br><input type="text" class="form-control col-sm-12 col-md-6" name="email" id="email"><br>
+                            <label for="newpassword">New password: </label><br>
+                            <input type="password" class="form-control col-sm-12 col-md-6" name="newpassword" id="newpassword"><br>
                             <input type='submit' name='submit' value='Submit'>
                             <br>
+
+
                             <div style="color:#f00;">
                             <?php
 
@@ -113,11 +117,11 @@ include 'db_config.php';
 
                                 switch ($l) {
                                     case "0" :
-                                        echo "Unknown email/empty";
+                                        echo "Unknown email/empty fields.";
                                         break;
 
                                     case "1" :
-                                        echo "Look your emails";
+                                        echo "You have chaneged your password.";
                                         break;
 
 
