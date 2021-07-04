@@ -66,10 +66,6 @@ include 'db_config2.php';
                 <a class="nav-link " href="login.php">Login</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="search.php" method="post" >
-            <input class="form-control mr-sm-2" type="search" placeholder="Search"  name="search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 
 </nav>
@@ -90,47 +86,56 @@ include 'db_config2.php';
 
 <div class="card-section">
     <div class="container">
-        <div class="card-block bg-white mb30">
-            <div class="row">
-                <div class="col-12">
-                    <!-- section-title -->
-                    <div class="section-title  mb-0">
-                        <h2 style="margin-bottom: 100px;">Double room</h2>
+        <div class="card-block bg-white  mb30">
+            <!-- section-title -->
+            <div class="section-title mb-0">
+                <h2 style="margin-bottom: 100px;">Double room</h2>
 
-                    </div>
+            </div>
+
+            <div class="row">
                     <?php
-                    $sql = "SELECT room_price,room_image
+                    $sql = "SELECT room_price,room_image,free_room,discount
                     FROM room
                     WHERE room_type='double';";
 
                     $result = $connection->query($sql);
                     if ($result->num_rows > 0)
                     {
+
                         while ($row = $result->fetch_assoc())
                         {
-                            echo "<div class='card mx-auto col-md-7 col-sm-12 col-12' >";
-                            echo'<img src="data:image/jpeg;base64,'.base64_encode( $row['room_image'] ).'" alt="multiple room" 
-                             class="card-img-top img-responsive img-fluid">';
+                            echo " <div class='card mx-auto col-md-5 col-sm-12 col-12 mb-5' >";
+                            echo'<img src="data:image/jpeg;base64,'.base64_encode( $row['room_image'] ).'" alt="single room"  class="card-img-top img-responsive img-fluid">';
                             echo "<div class='card-body text-center'>";
                             echo "<ul class='list-group list-group-flush'>";
-                            echo "<li class='list-group-item text-center'><b>Price: </b>".$row["room_price"]." RSD/night"."</li>";
-
+                            if($row['discount']>0){
+                                if($row['discount']==50)
+                                {
+                                    echo "<li class='list-group-item text-center text-white  bg bg-danger'><b>Discount: </b>".$row["discount"]."%"."</li>";
+                                }
+                                else {
+                                    echo "<li class='list-group-item text-center text-white  bg bg-warning'><b>Discount: </b>" . $row["discount"] . "%" . "</li>";
+                                }
+                            }
+                            echo "<li class='list-group-item text-center'><b>Price: </b>".$row["room_price"]." &euro;/night"."</li>";
+                            echo "<li class='list-group-item text-center'><b>Free rooms: </b>".$row["free_room"]."</li>";
+                            echo "</ul>";
+                            echo '<button type="button" class="btn btn-primary  col-md-3 col-sm-12 col-12 mx-auto" onclick="youneed()"  data-toggle="button"> Book</button>';
+                            echo "</div>";
+                            echo "</div>";
                         }
                     }?>
 
-
-                    <button type="button" class="btn btn-primary col-md-3 col-sm-12 col-12" data-toggle="button">
-                        Book
-                    </button>
                 </div>
             </div>
-
         </div>
     </div>
-</div>
-
-
-
+ <script>
+     function youneed() {
+            alert(" You need to  register!");
+        }
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
