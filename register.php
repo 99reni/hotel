@@ -68,10 +68,6 @@
                 <a class="nav-link " href="login.php">Login</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="search.php" method="post" >
-            <input class="form-control mr-sm-2" type="search" placeholder="Search"  name="search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 
 </nav>
@@ -91,17 +87,16 @@
 <!-- /.page-header-->
 
 <div class="card-section">
-    <div class="container">
-        <div class="card-block bg-white mb30">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title mb-0">
+    <div class="container mx-auto" >
+        <div class="row col-12 bg bg-white mx-auto  pl-5" >
+
+                    <div class="section-title mb-0 mt-5">
                         <h2>Register</h2>
                         <br>
                     </div>
 
 
-                        <div class="form-group  col-12 mx-auto">
+                        <div class="form-group  col-12 mx-auto mb-5">
 
 
                             <form method="post" action="web.php" name="register">
@@ -163,9 +158,9 @@
                                 <label for="email">E-mail: </label> <br><input type="text" class="form-control col-sm-12 col-md-6" name="email" id="email"> (valid email address)<br>
                                 <label for="captcha">Captcha: </label> <br>
                                 <input type="text" class="form-control col-sm-12 col-md-6" name="captcha" id="captcha" size="8"> <br>
-                                <img src="captcha.php"  border="0" width="80" height="60" alt="code"> <br>
-                                <input type="submit"  class="col-sm-12 col-md-3  col-12" name="sd" value="register">
-                                <input type="reset" class="col-sm-12 col-md-3  col-12" name="rd" value="cancel">
+                                <img src="captcha.php"  border="0" width="80" height="60" alt="code"> <br><br>
+                                <input type="submit"  class="col-sm-12 col-md-3  col-12 btn btn-success" name="sd" value="Register">
+                                <input type="reset" class="col-sm-12 col-md-3  col-12 btn btn-danger" name="rd" value="Cancel">
                             </form>
                         </div>
 
