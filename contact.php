@@ -63,10 +63,6 @@
                 <a class="nav-link " href="login.php">Login</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="search.php" method="post" >
-            <input class="form-control mr-sm-2" type="search" placeholder="Search"  name="search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 
 </nav>
@@ -86,47 +82,68 @@
 <!-- /.page-header-->
 
 <div class="card-section">
-    <div class="container">
-        <div class="card-block bg-white mb30">
-            <div class="row">
-                <div class=" col-12">
+    <div class="container mx-auto" >
+        <div class="row col-12 bg bg-white mx-auto" >
+
                     <!-- section-title -->
-                    <div class="section-title mb-0">
+                    <div class="section-title mb-0 mt-5 col-12">
                         <h2>Contact</h2>
                         <br>
 
                     </div>
                     <!-- /.section-title -->
 
-                    <div class="row " >
-                        <div class="col-md-6 col-lg-6 col-sm-12">
-                            <form action="/post" method="post">
-                                <input class="form-control" name="name" placeholder="Name..." /><br>
+                    <div class="row col-12 mx-auto mb-5" >
+                            <form action="info.php"  class="col-12 col-sm-12 col-md-6" method="post">
+                                <input class="form-control " name="name" placeholder="Name..." /><br>
                                 <input class="form-control" name="phone" placeholder="Phone..." /><br>
-                                <input class="form-control" name="email" placeholder="E-mail..." /><br>
+                                <input class="form-control" name="email" placeholder="Your e-mail..." /><br>
                                 <textarea class="form-control" name="text" placeholder="How can we help you?" style="height:150px;"></textarea><br />
-
-                                <input class="btn btn-primary" type="submit" value="Send" />
+                                <div class="row col-12 mx-auto">
+                                <input class="btn btn-primary col-md-4 col-12 mx-auto" type="submit" value="Send" />
+                                    <input class="btn btn-danger text-white col-md-4 col-12 mx-auto" type="reset" value="Reset" />
+                                </div>
                             </form>
-                        </div>
+                            <?php
+                            $c = "";
+
+                            if (isset($_GET["c"])) {
+                                $c = $_GET["c"];
+                                $message_c='';
+                                switch ($c) {
+
+                                    case "0" :
+                                        $message_c="You sent your letter!";
+                                        break;
+                                    case "1":
+                                        $message_c="You did not send the letter!";
+                                        break;
+                                    case "2":
+                                        $message_c="Something went wrong!";
+                                        break;
+                                    case "3":
+                                        $message_c="You need to fill the all fields!";
+                                        break;
+                                }
+                                echo "<script type='text/javascript'>alert('$message_c');</script>";
+                            }
+                            ?>
                         <div class="col-md-6 col-lg-6  col-sm-12 text-center" style="padding-top: 35px;">
-                            <b>Serbia, Subotica </b><br>
-                            <b>Road 55, 24000</b><br>
+                            <b>Montenegro, Budva </b><br>
+                            <b>Road 55, 28000</b><br>
                             <b>Phone:</b> 024 555 555<br>
                             <b>Mobile:</b> 065 669 994<br>
-                            <b>E-mail: info@site.com<br>
+                            <b>E-mail: echo@gmail.com<br>
 
                         </div>
-                    </div>
+                        </div>
 
 
-
-                </div>
             </div>
         </div>
 
     </div>
-</div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
