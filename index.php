@@ -9,20 +9,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <style>
-    @media (min-width: 344px) {
-    h1 {font-size:16px;} /*1rem = 16px*/
+    @media (max-width: 768px) {
+    h1 {font-size:20px;
     }
 
-    /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-    @media (min-width: 768px) {
-        h1 {font-size:32px;} /*1rem = 16px*/
-    }
+     @media (min-width: 777px) {
+         h1 {font-size:25px;
+         }
+
+
 </style>
     <link href="style.css" rel="stylesheet" type="text/css">
-
-
 </head>
 
 <body>
@@ -61,20 +59,49 @@
             <a class="nav-link " href="login.php">Login</a>
         </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" action="search.php" method="post" >
-        <input class="form-control mr-sm-2" type="search" placeholder="Search"  name="search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
 </div>
 
 </nav>
-<div id="welcome" class="col-3 mx-auto">
+<div id="welcome" style="background-color: rgba(173, 172, 172, 0.52);" class="col-md-3 col-sm-10 col-10 mx-auto">
     <h1>Welcome in Echo</h1>
 </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide mx-auto col-md-8 col-sm-11 col-11 mt-5 mb-5" data-ride="carousel">
+        <ol class="carousel-indicators mx-auto">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner mx-auto">
+            <div class="carousel-item active">
+                <img class="d-block img-responsive img-fluid mx-auto" src="image/1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-responsive img-fluid mx-auto" src="image/5.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-responsive img-fluid mx-auto" src="image/2.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-responsive img-fluid mx-auto" src="image/4.jpg" alt="Fourth slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
