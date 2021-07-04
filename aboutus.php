@@ -63,10 +63,6 @@
                 <a class="nav-link " href="login.php">Login</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="search.php" method="post" >
-            <input class="form-control mr-sm-2" type="search" placeholder="Search"  name="search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 
 </nav>
@@ -86,28 +82,26 @@
 <!-- /.page-header-->
 
 <div class="card-section">
-    <div class="container">
-        <div class="card-block bg-white mb30">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <!-- section-title -->
-                    <div class="section-title mb-0">
-                        <h2>About us</h2>
+    <div class="container mx-auto" >
+        <div class="row col-12 bg bg-white mx-auto" >
 
-                    </div>
+            <!-- section-title -->
+            <div class="section-title mb-0 mt-5 col-12">
+                <h2>About us</h2>
+                <br>
 
-                    <p style="margin-top: 30px;">No two neighborhoods are alike. Neither are any two Echo properties.
+            </div>
+
+                    <p style="margin-top: 30px;" class="m-4">No two neighborhoods are alike. Neither are any two Echo properties.
                     When you stay with us, you’re not just staying anywhere, you’re staying somewhere-within a vibrant community,
                     in a unique hotel that combines authentic local experiences, modern design and intimate service with the peace of mind
-                    </p>
-                    <p>
                         Each hotel is as individual as its surroundings and is also a reflection of them.
                         You can taste the local flavor on our menus and see it in the art and photography displayed on our walls.
                         You’ll catch guests and neighbors hanging out in our bars,
                         get great advice from our team members on what to see and do in the neighborhood,
                         and be refreshed by just how relaxed and inviting it all feels.</p>
 
-                    <h2  class="pb-5">Our services</h2>
+                    <h2  class="pb-5 ml-3">Our services</h2>
                     <div class="container">
                         <h3 class="col-lg-6 col-md-6 col-sm-8 col-12 mx-auto text-center">Swimmingpool</h3>
                         <div class="row">
@@ -134,8 +128,7 @@
             </div>
         </div>
 
-    </div>
-</div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
