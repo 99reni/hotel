@@ -1,0 +1,155 @@
+.content{
+    margin-top:10%;
+    background-color: rgba(141, 143, 144, 0.79);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color:#ffffff;
+    height: auto;
+}
+.table{
+    margin-top: 10px;
+}
+td{
+    border:solid 1px #ffffff;
+    text-align: center;
+}
+.button{
+    margin: auto;
+}
+.button:hover
+{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2), 0 6px 16px 0 rgba(0,0,0,0.19);
+   border:1px solid grey;
+
+}
+.insert{
+    background-color: rgba(253, 202, 158, 0.74);'
+    width:80%;
+    height:auto;
+    color:#1b1e21;
+    padding-bottom: 10px;
+
+}
+
+.insert h4{
+    text-align: center;
+}
+
+.form input{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.op{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+.op1{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+.form label{
+    width: 100%;
+    text-align: center;
+
+}
+.update5{
+    background-color: rgba(241, 214, 134, 0.74);'
+    width:80%;
+    height: auto;
+    color:#1b1e21;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+
+}
+
+.update5 h4,.upload h4{
+    text-align: center;
+}
+.upload{
+    background-color: rgba(135, 234, 117, 0.74);'
+    width:80%;
+    height: auto;
+    color:#1b1e21;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.data{
+
+    color: #4b4a4a;
+    background-color: white;
+    padding: 2px;
+    box-shadow:  2px 3px #888888;
+
+
+}
+.data1{
+    color: #1f1c1c;
+    font-weight: bold;
+   text-align: center;
+}
+.user{
+    background-color: #efe695;
+    padding-top:15px;
+
+
+}
+.insert_user{
+    background-color: #e77a7a;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+h4{
+    text-align: center;
+    color: #e80729;
+    text-shadow:  2px 2px 3px #ffecf7;
+}
+.circular h1
+{
+    text-align: center;
+}
+h5{
+    text-align: center;
+    font-weight: bold;
+    color: #4b4a4a;;
+}
+.ok h4{
+    margin-top: 10px;
+    text-align: center;
+    color: #b11220;
+    font-weight: bolder;
+}
+.ok p{
+    color: #393d3d;
+    text-align: center;
+
+}
+.ok input{
+    margin-bottom: 15px;
+}
+.reply{
+    background-color: rgba(224, 195, 145, 0.74);'
+    width:80%;
+    height: auto;
+    color:#1b1e21;
+    padding-bottom: 15px;
+
+}
+.reply h6{
+   text-align: center;
+    color: #343536;
+}
+.reply h4{
+    color: #343536;
+
+}
+.replied{
+   padding:6px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    margin-bottom: 7px;
+}
