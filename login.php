@@ -25,7 +25,6 @@
                 display: block;
                 float: none;
             }
-
         }
     </style>
     <link href="style2.css" rel="stylesheet" type="text/css">
@@ -66,10 +65,6 @@
                 <a class="nav-link " href="login.php">Login</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="search.php" method="post" >
-            <input class="form-control mr-sm-2" type="search" placeholder="Search"  name="search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 
 </nav>
@@ -89,60 +84,48 @@
 <!-- /.page-header-->
 
 <div class="card-section">
-    <div class="container">
-        <div class="card-block bg-white mb30">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <!-- section-title -->
-                    <div class="section-title mb-0">
-                        <h2>Login</h2>
-                        <br>
+    <div class="container mx-auto" >
+        <div class="row col-12 bg bg-white mx-auto  pl-5" >
 
+
+                    <div class="section-title mb-0 mt-5">
+                        <h2>Login</h2><br>
                     </div>
-                    <!-- /.section-title -->
                     <div class=" col-lg-12 col-md-12 col-sm-12 col-12">
                         <form method="post" action="web.php" name="login">
-                            <label for="username">Username: </label><br><input type="text" class="form-control col-sm-12 col-md-6" name="username" size="20" maxlength="20"
-                                                                           id="username"><br>
-                            <label for="password">Password: </label><br><input type="password" class="form-control col-sm-12 col-md-6" name="password" id="password"><br>
-                            <input type="submit" name="sd" value="login">
-                            <input type="reset" name="rd" value="cancel">
+                            <div style="color:#f00;">
+                                <?php
+                                $l = "";
+
+                                if (isset($_GET["l"])) {
+                                    $l = $_GET["l"];
+
+                                    switch ($l) {
+                                        case "0" :
+                                            echo "No direct access!";
+                                            break;
+                                        case "1" :
+                                            echo "Unknown user!";
+                                            break;
+                                        case "5" :
+                                            echo "You are logged out!";
+                                            break;
+                                    }
+                                }
+                                ?>
+                            </div>
+                            <label for="username">Username: </label><br><input type="text" class="form-control col-12 col-sm-12 col-md-6" name="username" size="20" maxlength="20" id="username"><br>
+                            <label for="password">Password: </label><br><input type="password" class="form-control col-12 col-sm-12 col-md-6" name="password" id="password"><br>
+
+                                <input type="submit" name="sd" value="Login" class="send mx-auto btn btn-success col-sm-12 col-md-3">
+                                <input type="reset" name="rd" value="Cancel" class="send mx-auto btn btn-danger col-sm-12 col-md-3">
+
                         </form>
                     </div>
-                    <div class="login col-lg-6 col-sm-12 col-12" >
+                    <div class="login col-lg-6 col-sm-12 col-12 mb-5" >
                         <br>
-                        <span class="psw" style="padding-top: 10px; margin-left:25%;">Forgot your <a href="forgotpassword.php">password?</a></span>
+                        <span class="psw" >Forgot your <a href="forgotpassword.php">password?</a></span>
                     </div>
-                    <div style="color:#f00;">
-                    <?php
-
-                    $l = "";
-
-                    if (isset($_GET["l"])) {
-                        $l = $_GET["l"];
-
-                        switch ($l) {
-                            case "0" :
-                                echo "No direct access!";
-                                break;
-
-                            case "1" :
-                                echo "Unknown user!";
-                                break;
-
-
-                            case "5" :
-                                echo "You are logged out!";
-                                break;
-
-
-                        }
-                    }
-
-                    ?>
-                    </div>
-                    </form>
-
                 </div>
                 </div>
             </div>
